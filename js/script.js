@@ -82,7 +82,10 @@ formularioUsuarios.addEventListener("submit", (event) =>{
 
 function genPDF(){
     mascota.nombreMascota= formularioUsuarios.nombreMascota.value
-    if(mascota.nombreMascota!== ""){
+    if(mascota.nombreMascota == ""){
+        swal("Rellene el formulario", "Sin datos","warning");  
+    }   
+    else {
         mascota.cumpleGato= formularioUsuarios.cumpleGato.value
         mascota.sexoMascota= formularioUsuarios.sexoMascota.value
         mascota.peso= formularioUsuarios.peso.value
@@ -131,9 +134,7 @@ function genPDF(){
         doc.save('LoveOurCats.pdf');
         swal("Guardando el documento en un pdf", "Click en Ok....","success");        
         } 
-        else{
-            swal("Rellene el formulario", "Sin datos","warning");  
-        }
+        
     
 
 }
