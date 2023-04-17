@@ -7,55 +7,53 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    
     <title>Document</title>
 </head>
 <body>
     <header>
-        <img src="./svg/Love our cats.svg" alt="Love Our Cats">
+        <div class="encabezadoAzul">
+            <img src="./svg/Love our cats.svg" alt="Love Our Cats">
+        </div>
+        <div class="encabezadoCeleste">
+            <nav>
+                <a href="./index.html">Home</a>
+                <a href="./razas.html">Razas</a>
+                <a href="./sobre.html">Sobre Nosotros</a>
+            </nav>
+        </div>
     </header>
-        <main>
-            <div class="encabezadoCeleste">
-                <nav>
-                    <a href="./index.html">Home</a>
-                    <a href="./razas.html">Razas</a>
-                    <a href="./sobre.html">Sobre Nosotros</a>
-    
-                </nav>
-            </div>
+    <main>      
         <h1>Completa los datos para saber IMC de tu gato</h1>  
-        <br>
-       
+        <br>  
         <form class="formularioUsuarios">
             <div class="inputContainer">
-                <label for="nombreMascota"> Nombre Mascota</label>
+                <label for="nombreMascota"> Nombre de tu gato</label>
                 <input type="text" id="nombreMascota" placeholder="Canela" required name="nombreMascota">
             </div>
             <div class="inputContainer">
-                    <label for="cumpleGato"> Cumple Gato</label>
+                    <label for="cumpleGato">Fecha de Nacimiento de tu gato</label>
                     <input type="date" placeholder="22/04/2022" required id="cumpleGato"  required name="cumpleGato" >
             </div>    
             <div class="inputContainer">
-                <label for="sexoMascota"> Sexo de tu Mascota </label>
-                    <select name="sexoMascota" id="sexoMascota"  required>
-                      <option value="gata">Gata</option>
-                      <option value="gato">Gato</option>
+                <label for="sexoMascota"> Sexo de tu gato </label>
+                    <select name="sexoMascota" id="sexoMascota">
+                      <option value="Gata">Gata</option>
+                      <option value="Gato">Gato</option>
                     </select>
             </div>
             <div class="inputContainer">
-                <label for="peso"> Peso en Kilogramos</label>
-                <input type="number" id="peso" placeholder="19"  required>
+                <label for="peso"> Peso de tu gato (Kg)</label>
+                <input type="number" id="peso" placeholder="19">
             </div>
             <div class="inputContainer">
                 <label for="cirPanza"> Circunferencia de la Panza (cm)</label>
-                <input type="number" id="cirPanza" placeholder="5"  required>
+                <input type="number" id="cirPanza" placeholder="20"  required>
             </div>
             <div class="inputContainer">
                 <label for="largoPata"> Largo de la pata (cm)</label>
-                <input type="number" id="largoPata" placeholder="50"  required>
+                <input type="number" id="largoPata" placeholder="15"  required>
             </div>
             <a href="./medidas.html" target="_blank"> Como mido a mi Gato<i class="bi bi-patch-question-fill"></i></a>
-
             <input type="submit" value = "Calcular IMC" class="btn-calcular">
             <a href="javascript:genPDF()"> <i class="bi bi-printer-fill"></i>  Descargar en PDF</a>  
             <br>
@@ -63,13 +61,13 @@
         </form>
         <div id="contenedorMascota" class="contenedorMascota"></div>
         </div>
+        <br>
     </main>
     <footer class="piePagina">
         <div class="contenedorPie">
             <div class="contenedor-row">
                 <div class="box">
                     <h3> Argentina Programa 4.0</h3>
-                   
                 </div>
                 <div class="box-redes">
                     <div  class="redes">
@@ -77,11 +75,10 @@
                             <i class="bi bi-instagram"></i>
                             <i class="bi bi-envelope-fill"></i>
                     </div>
-
                 </div>
             </div>
         </div>
-
+    </footer>
     <script src="./js/script.js"></script>
     <script src="./js/jspdf.min.js"></script>
     </body>
