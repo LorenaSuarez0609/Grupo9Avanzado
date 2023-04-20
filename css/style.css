@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
 
 *{
-    font-family: 'Righteous', cursive;
+    font-family: 'Roboto', sans-serif;
     margin: 0px;
     padding: 0px;
     list-style: none; /**Elimina los puntos de la lista*/
@@ -69,6 +69,7 @@ main{
     align-items: center;
 }
 h1{
+    font-family: 'Righteous', cursive;
     font-size: 30px;
     color: var(--azul);
     text-align: center;
@@ -147,7 +148,7 @@ main form{
     display: flex;
     flex-direction: column;
     gap:3vh;
-    width: 70%;
+    width: 50%;
     
 }
 main form .inputContainer{
@@ -155,9 +156,11 @@ main form .inputContainer{
     width: 100%;
     color: var(--gris1);
     background-color: var(--blancoceleste);
+    display:flex;
     flex-direction: column;
     gap:1vh;
 }
+
 main form .inputContainer input, select{
     border:none;
     border-bottom: 1px solid var(--gris2);
@@ -167,6 +170,7 @@ main form .inputContainer input, select{
 }
 
 .btn-calcular{
+    font-family: 'Righteous', cursive;
     background-color: var(--azul);
     color:var(--blancopuro);
     border: 1px solid rgb(57, 102, 236);
@@ -175,25 +179,24 @@ main form .inputContainer input, select{
     width:200px;
     height:50px;
     font-size: 18px;
+    cursor: pointer;
    }
-input,select{
+input,select, option{
     font-size: 18px;
-}
-
-main form .inputContainer{
-    display:flex;
-    width: 100%;
-    flex-direction: column;
-    gap:1vh;
 }
 
 .bi-patch-question-fill{
     color:#3D5A80;
     font-size: 20px;
+    
 }
 .bi-printer-fill{
     color:#3D5A80;
     font-size: 25px;
+   
+}
+form a{
+    text-decoration: none;
 }
 
 /*//Resultado Formulario//*/
@@ -214,10 +217,11 @@ main form .inputContainer{
 /*/ Estilo Medidas//*/
 
 .medidasGato img{
-    width:100%; 
-    height:100%;
+    width:80%; 
+    height:80%;
     border-radius: 5px;
 }
+
 
 
 /*//Estilos Razas //*/
@@ -346,13 +350,15 @@ select{
         font-size: 12px;
    
     }
-    input,select{
+    input,option{
+        font-family: 'Roboto', sans-serif;
         font-size: 10px;
     }
     footer{
         font-size: 10px;
     }
     main form{
+        font-family: 'Roboto', sans-serif;
         width: 60%;
          
      }
@@ -363,7 +369,8 @@ select{
     html{
         font-size: 10px;
     }
-    input,select{
+    input,select, option{
+        
         font-size: 8px;
     }
     footer{
@@ -373,7 +380,7 @@ select{
         border-radius: 5px;
     }
     main form{
-       width: 60%;
+        width: 60%;
         
     }
 

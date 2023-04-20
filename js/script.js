@@ -82,6 +82,10 @@ formularioUsuarios.addEventListener("submit", (event) =>{
 
 function genPDF(){
     mascota.nombreMascota= formularioUsuarios.nombreMascota.value
+    var calculo = 0;
+    var imagenGato = new Image();
+    imagenGato.src="";
+    var estadoGato = "";
     if(mascota.nombreMascota == ""){
         swal("Rellene el formulario", "Sin datos","warning");  
     }   
@@ -91,10 +95,6 @@ function genPDF(){
         mascota.peso= formularioUsuarios.peso.value
         mascota.cirPanza= formularioUsuarios.cirPanza.value
         mascota.largoPata= formularioUsuarios.largoPata.value
-        var calculo = 0;
-        var imagenGato = new Image();
-        imagenGato.src="";
-        var estadoGato = "";
         calculo = calcularIMC(mascota.peso, mascota.cirPanza, mascota.largoPata)
         if(calculo <=10){
             estadoGato = "Tu gato tiene Bajo Peso";
